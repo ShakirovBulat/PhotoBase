@@ -18,6 +18,10 @@ namespace PhotoBase.DB
         {
             return db.Table<ProjectPhoto>();
         }
+        public int DeleteItem(int id)
+        {
+            return db.Delete<ProjectPhoto>(id);
+        }
         public int SaveItem(ProjectPhoto projectphoto)
         {
             if (projectphoto.Id != 0)

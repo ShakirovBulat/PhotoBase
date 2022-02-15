@@ -90,5 +90,18 @@ namespace PhotoBase
         {
             Navigation.PushAsync(new TakePhoto((ProjectPhoto)e.Item));
         }
+        private void SwipeItem_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var id = ((SwipeItem)sender).CommandParameter.ToString();
+                App.Db.DeleteItem(int.Parse(id));
+                UpdateList();
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("", ex.Message, "ok");
+            }
+        }
     }
 }

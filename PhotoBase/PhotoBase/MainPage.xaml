@@ -46,10 +46,22 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout HeightRequest="280">
-                                    <Label Text="{Binding Name}" TextColor="Black" FontSize="20"/>
-                                    <Image Margin="0, 0, 200, 500" Source="{Binding Imagepath}"/>
-                                </StackLayout>
+                                <SwipeView>
+                                    <SwipeView.RightItems>
+                                        <SwipeItems>
+                                            <SwipeItem
+                                                BackgroundColor="Red"
+                                                Clicked="SwipeItem_Clicked"
+                                                CommandParameter="{Binding Id}"
+                                                IconImageSource="delete.png"
+                                                Text="удалить" />
+                                        </SwipeItems>
+                                    </SwipeView.RightItems>
+                                    <StackLayout HeightRequest="280">
+                                        <Label Text="{Binding Name}" TextColor="Black" FontSize="20"/>
+                                        <Image Margin="0, 0, 200, 500" Source="{Binding Imagepath}"/>
+                                    </StackLayout>
+                                </SwipeView>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
