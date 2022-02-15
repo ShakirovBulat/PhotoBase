@@ -64,6 +64,10 @@ namespace PhotoBase
 
         public void UpdateList()
         {
+            imageList.RefreshCommand = new Command(() =>
+            {
+                imageList.IsRefreshing = false;
+            });
             imageList.ItemsSource = null;
             imageList.ItemsSource = App.Db.GetProjects();
         }

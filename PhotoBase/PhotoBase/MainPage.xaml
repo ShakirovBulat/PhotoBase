@@ -42,12 +42,13 @@
         </StackLayout>
         <StackLayout Margin="15, 20">
             <ScrollView>
-                <ListView x:Name="imageList" ItemTapped="imageList_ItemTapped">
+                <ListView IsPullToRefreshEnabled="True" x:Name="imageList" ItemTapped="imageList_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
                                     <Label Text="{Binding Name}" TextColor="Black" FontSize="20"/>
+                                    <Image Source="{Binding Imagepath}" />
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
