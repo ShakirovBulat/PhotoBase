@@ -90,7 +90,7 @@ namespace PhotoBase
         {
             Navigation.PushAsync(new TakePhoto((ProjectPhoto)e.Item));
         }
-        private void SwipeItem_Clicked(object sender, EventArgs e)
+        private void Swipe_Clicked(object sender, EventArgs e)
         {
             try
             {

@@ -51,9 +51,8 @@
                                         <SwipeItems>
                                             <SwipeItem
                                                 BackgroundColor="Red"
-                                                Clicked="SwipeItem_Clicked"
+                                                Clicked="Swipe_Clicked"
                                                 CommandParameter="{Binding Id}"
-                                                IconImageSource="delete.png"
                                                 Text="удалить" />
                                         </SwipeItems>
                                     </SwipeView.RightItems>
