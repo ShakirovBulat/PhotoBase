@@ -40,21 +40,21 @@
             Clicked="add_Clicked" 
             Padding="30,10"/>
         </StackLayout>
-        <StackLayout Margin="15, 20">
-            <ScrollView>
-                <ListView IsPullToRefreshEnabled="True" x:Name="imageList" ItemTapped="imageList_ItemTapped">
+        <ScrollView>
+            <StackLayout Margin="15, 20">
+                <ListView IsPullToRefreshEnabled="True" x:Name="imageList" ItemTapped="imageList_ItemTapped" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout>
+                                <StackLayout HeightRequest="280">
                                     <Label Text="{Binding Name}" TextColor="Black" FontSize="20"/>
-                                    <Image Source="{Binding Imagepath}" />
+                                    <Image Margin="0, 0, 200, 500" Source="{Binding Imagepath}"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </ScrollView>
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
 </ContentPage>
